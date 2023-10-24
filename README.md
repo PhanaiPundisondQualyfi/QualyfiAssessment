@@ -10,3 +10,18 @@ The project is an end-to-end data engineering solution designed to process and a
 - Data Pipeline and Orchestration via Azure Data Factory
 - Data Transformation via Azure Databricks
 - Visualisation via Microsoft Power BI
+
+## Documentation
+
+[Terraform](https://developer.hashicorp.com/terraform/docs)
+
+[Azure Blob Storage](https://learn.microsoft.com/en-gb/azure/storage/blobs/)
+
+[Azure Data Factory](https://learn.microsoft.com/en-us/azure/data-factory/)
+
+[Azure Databricks](https://learn.microsoft.com/en-gb/azure/databricks/)
+
+[Microsoft Power BI](https://learn.microsoft.com/en-us/power-bi/)
+
+
+
