@@ -5,7 +5,7 @@
 ## TABLE OF CONTENTS
 - [1. Data Modelling](#1-data-modelling)
 - [2. Infrastructure Setup](#2-infrastructure-setup)
-- [3. Data Engineering With ADF, Databricks](#3-data-engineering-with-adf--databricks)
+- [3. Data Engineering With ADF & Databricks](#3-data-engineering-with-adf--databricks)
 - [4. Data Visualisation](#4-data-visualisation)
 - [5. GitHub Repository](#5-github-repository)
 - [Documentation](#documentation)
@@ -31,7 +31,7 @@ All 3 designs can be viewed in the Designs directory.
 ## 2. Infrastructure Setup
 Used terraform to set up the storage containers (landing, bronze, silver, gold) in the Azure storage account. A terraform script was created using VSCode and can be viewed in the infrastructure.tf file.
 
-## 3. Data Engineering With ADF, Databricks
+## 3. Data Engineering With ADF & Databricks
 Created a pipeline showing a copy data activity and 3 Databricks notebook using Azure Data Factory.
 - Copy data activity (CopyToLanding)
 
