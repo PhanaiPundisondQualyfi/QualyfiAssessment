@@ -2,6 +2,14 @@
 
 ![Solution Design](https://github.com/PhanaiPundisondQualyfi/QualyfiAssessment/assets/147846684/67f16abc-cc43-49c4-aee4-69c06986e736)
 
+TABLE OF CONTENTS
+- [1. Data Modelling](#1-data-modelling)
+- [2. Infrastructure Setup](#2-infrastructure-setup)
+- [3. Data Engineering With ADF, Databricks](#3-data-engineering-with-adf--databricks)
+- [4. Data Visualisation](#4-data-visualisation)
+- [5. GitHub Repository](#5-github-repository)
+- [Documentation](#documentation)
+
 The assessment was to utilise the tools and skills gained during the Qualyfi Accelerator program.
 
 The project is an end-to-end data engineering solution designed to process and analyse the NYC yellow taxi dataset in the years, 2019, 2014, and 2010. It caters to data professionals, analysts, and stakeholders interested in gaining insights from this dataset. The key components and functionalities of this project includes:
@@ -23,7 +31,7 @@ All 3 designs can be viewed in the Designs directory.
 ## 2. Infrastructure Setup
 Used terraform to set up the storage containers (landing, bronze, silver, gold) in the Azure storage account. A terraform script was created using VSCode and can be viewed in the infrastructure.tf file.
 
-## 3. Data Engineering: ADF, Databricks
+## 3. Data Engineering With ADF, Databricks
 Created a pipeline showing a copy data activity and 3 Databricks notebook using Azure Data Factory.
 - Copy data activity (CopyToLanding)
 
