@@ -2,7 +2,7 @@
 
 ![Solution Design](https://github.com/PhanaiPundisondQualyfi/QualyfiAssessment/assets/147846684/67f16abc-cc43-49c4-aee4-69c06986e736)
 
-TABLE OF CONTENTS
+## TABLE OF CONTENTS
 - [1. Data Modelling](#1-data-modelling)
 - [2. Infrastructure Setup](#2-infrastructure-setup)
 - [3. Data Engineering With ADF, Databricks](#3-data-engineering-with-adf--databricks)
