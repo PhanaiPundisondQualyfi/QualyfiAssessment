@@ -35,7 +35,7 @@ Used terraform to set up the storage containers (landing, bronze, silver, gold) 
 Created a pipeline showing a copy data activity and 3 Databricks notebook using Azure Data Factory.
 - Copy data activity (CopyToLanding)
 
-Moved data from source container to the landing container
+Moved data from source container to the landing container using the copy data tool in ADF. Use the LinkedService to connect ADF to the Azure storage blob.
 - Notebook 1 (LandingToBronze)
 
 Read data from landing container to notebook using abfss:// and a storage access key. Added columns to the dataframe; FileName, and CreatedOn, then renamed columns containing a "vendor_id" column to "VendorID" for partition. Mounted the data to DBFS and then wrote the data to the bronze container in Delta format and partitioned by "VendorID".
