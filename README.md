@@ -48,6 +48,9 @@ Read data from bronze container to notebook using abfss:// and a storage access 
 
 Read data from silver container to notebook using abfss:// and a storage access key. Created dimension tables and a fact table based on the data schema from the silver container. Added additional columns to the dimension tables such as "vendor_name" and "PULocationName" for better visualisation. Loaded the tables to the gold container by creating a directory for each table.
 
+- Notebook 4 (GoldToDBFS)
+Moved data from "gold" container to the Hive data store, enhancing accessibility for Power BI integration. Configured access to the Azure Storage account and reading "gold" tables such as "DimTime", "DimLocation", "DimVendor", and "FactTrip". Proceede to create a database ("database_pp") in Hive if it doesn't exist already. Subsequently, it  writes the dimension tables and fact table to this database in Hive. 
+
 ## 4. Data Visualisation
 
 Connected Databricks to Microsoft Power BI using the provided function, Partner Connect. Before, opening the Power BI file, loaded the gold tables into the hivestore to access via Power BI. Created 4 visualisations; 2 bar charts,  1 pie chart, and 1 line chart to help answer 4 questions.
