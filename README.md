@@ -50,6 +50,8 @@ Read data from silver container to notebook using abfss:// and a storage access 
 
 ## 4. Data Visualisation
 
+Connected Databricks to Microsoft Power BI using the provided function, Partner Connect. Before, opening the Power BI file, loaded the gold tables into the hivestore to access via Power BI.
+
 ## 5. GitHub Repository
 
 Created a GitHub Repo to document and track changes for all files.
