@@ -50,9 +50,14 @@ Read data from silver container to notebook using abfss:// and a storage access 
 
 ## 4. Data Visualisation
 
-Connected Databricks to Microsoft Power BI using the provided function, Partner Connect. Before, opening the Power BI file, loaded the gold tables into the hivestore to access via Power BI.
+Connected Databricks to Microsoft Power BI using the provided function, Partner Connect. Before, opening the Power BI file, loaded the gold tables into the hivestore to access via Power BI. Created 4 visualisations; 2 bar charts,  1 pie chart, and 1 line chart to help answer 4 questions.
 
-![PowerBIVisuals](https://github.com/PhanaiPundisondQualyfi/QualyfiAssessment/assets/147846684/b5f964c4-d396-4f21-afd9-922ae844c2ba)
+- Vendor Ranked by Most Trips Taken: VTS
+- Which Vendor Is Charging The Lowest?: VTS
+- Most Common Pick Up Locations: Midtown Manhattan
+- When Is The Best Time To Get A Taxi On Christmas Eve?: 3AM
+
+![PowerBIVisuals](https://github.com/PhanaiPundisondQualyfi/QualyfiAssessment/assets/147846684/ba91224a-db1d-4752-88c7-4613956372c1)
 
 ## 5. GitHub Repository
 
