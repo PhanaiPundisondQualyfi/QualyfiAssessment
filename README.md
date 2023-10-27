@@ -10,7 +10,7 @@
 - [5. GitHub Repository](#5-github-repository)
 - [Documentation](#documentation)
 
-The assessment was to utilise the tools and skills gained during the Qualyfi Accelerator program.
+The assessment utilised the tools and skills gained during the Qualyfi Accelerator program.
 
 The project is an end-to-end data engineering solution designed to process and analyse the NYC yellow taxi dataset in the years, 2019, 2014, and 2010. It caters to data professionals, analysts, and stakeholders interested in gaining insights from this dataset. The key components and functionalities of this project includes:
 - Data Model Designs via draw.io
