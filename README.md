@@ -38,7 +38,7 @@ Created a pipeline showing a copy data activity and 3 Databricks notebook using 
 Moved data from source container to the landing container using the copy data tool in ADF. Use the LinkedService to connect ADF to the Azure storage blob.
 - Notebook 1 (LandingToBronze)
 
-Read data from landing container to notebook using abfss:// and a storage access key. Added columns to the dataframe; FileName, and CreatedOn, then renamed columns containing a "vendor_id" column to "VendorID" for partition. Mounted the data to DBFS and then wrote the data to the bronze container in Delta format and partitioned by "VendorID".
+Read each year of data from landing container to notebook using abfss:// and a storage access key. Added columns to the dataframe; FileName, and CreatedOn, then renamed columns containing a "vendor_id" column to "VendorID" for partition.  Wrote the data to the bronze container in Delta format, partitioned by "VendorID", and directory 
 
 - Notebook 2 (BronzeToSilver)
 
@@ -46,7 +46,7 @@ Read data from bronze container to notebook using abfss:// and a storage access 
 
 - Notebook 3 (SilverToGold)
 
-Read data from bronze container to notebook using abfss:// and a storage access key.
+Read data from silver container to notebook using abfss:// and a storage access key. Created dimension tables and a fact table. Loaded the tables to the gold container.
 
 ## 4. Data Visualisation
 
