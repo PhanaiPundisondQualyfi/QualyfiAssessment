@@ -36,19 +36,21 @@ Created a pipeline showing a copy data activity and 3 Databricks notebook using 
 - Copy data activity (CopyToLanding)
 
 Moved data from source container to the landing container using the copy data tool in ADF. Use the LinkedService to connect ADF to the Azure storage blob.
+
 - Notebook 1 (LandingToBronze)
 
-Read each year of data from landing container to notebook using abfss:// and a storage access key. Added columns to the dataframe; FileName, and CreatedOn, then renamed columns containing a "vendor_id" column to "VendorID" for partition.  Wrote the data to the bronze container in Delta format, partitioned by "VendorID", and directory 
+Move and transformed data files from a "landing" container to a "bronze" container in an Azure Storage account using PySpark. Read CSV files for taxi trip data from various years (2019, 2014, and 2010), added columns for the file name and processing timestamp, renameed the "vendor_id" column to "VendorID" for specific years, and partitioned the data by "VendorID" before saving it in Delta Lake format in the "bronze" container.
 
 - Notebook 2 (BronzeToSilver)
 
-Read data from bronze container to notebook using abfss:// and a storage access key. Defined a schema based on the dataset columns in the bronze container. Created a "for loop" to map the dataset and standardise columns that had similar names onto the defined schema. Applied constraints to the total_amount and trip_distance columns. Wrote the data to the silver container in Delta format and partitioned by "PULocationID".
+Moved data from a "bronze" container to a "silver" container within an Azure Storage account using PySpark and applying data transformations. Configured access to the Azure Storage account, specifies the paths for reading data from the "bronze" container for three different VendorIDs (1, 2, and 4), and sets the destination path in the "silver" container. The script loaded data from the "bronze" container into three DataFrames, filtered out records where "total_amount" is non-null and greater than 0, and "trip_distance" is greater than 0 for each VendorID. The filtered data is then written to the "silver" container, partitioned by "PULocationID." The mode("overwrite") and mode("append") options ensure that data is either replaced or appended in the "silver" container.
 
 - Notebook 3 (SilverToGold)
 
-Read data from silver container to notebook using abfss:// and a storage access key. Created dimension tables and a fact table based on the data schema from the silver container. Added additional columns to the dimension tables such as "vendor_name" and "PULocationName" for better visualisation. Loaded the tables to the gold container by creating a directory for each table.
+Moved data from a "silver" container to a "gold" container in Azure Storage using PySpark and created dimension tables and a fact table. Configured access to the Azure Storage account, loaded data from the "silver" container into the df_silver DataFrame, and then constructed dimension tables such as "DimTime," "DimLocation," and "DimVendor" by selecting and transforming specific columns. A fact table is created by selecting relevant columns, including the addition of a unique identifier column ("TripID"). All these tables are saved in Delta Lake format in the "gold" container.
 
 - Notebook 4 (GoldToDBFS)
+
 Moved data from "gold" container to the Hive data store, enhancing accessibility for Power BI integration. Configured access to the Azure Storage account and reading "gold" tables such as "DimTime", "DimLocation", "DimVendor", and "FactTrip". Proceede to create a database ("database_pp") in Hive if it doesn't exist already. Subsequently, it  writes the dimension tables and fact table to this database in Hive. 
 
 ## 4. Data Visualisation
