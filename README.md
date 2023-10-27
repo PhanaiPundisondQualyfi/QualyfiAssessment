@@ -46,7 +46,7 @@ Read data from bronze container to notebook using abfss:// and a storage access 
 
 - Notebook 3 (SilverToGold)
 
-Read data from silver container to notebook using abfss:// and a storage access key. Created dimension tables and a fact table. Loaded the tables to the gold container.
+Read data from silver container to notebook using abfss:// and a storage access key. Created dimension tables and a fact table based on the data schema from the silver container. Added additional columns to the dimension tables such as "vendor_name" and "PULocationName" for better visualisation. Loaded the tables to the gold container by creating a directory for each table.
 
 ## 4. Data Visualisation
 
